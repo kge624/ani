@@ -1,18 +1,294 @@
-div {
-  display: flex;
+* {
+  box-sizing: border-box;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+body {
+  margin: 0;
+  color: #18242d;
+  background: #f4f1eb;
+  font-family: "Malgun Gothic", sans-serif;
 }
 
 h1 {
+  margin: 28px 0 22px;
+  color: #e4572e;
+  text-align: center;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid #d8d1c7;
+}
+
+body > div {
   display: flex;
-  justify-content: center;
 }
 
 aside {
+  flex: 0 0 150px;
   display: flex;
   flex-direction: column;
   gap: 10px;
+  align-items: stretch;
+  padding: 26px 16px;
+  border-right: 1px solid #d8d1c7;
+  min-height: calc(100vh - 86px);
+}
+
+aside button {
+  padding: 11px 12px;
+  border: 0;
+  border-radius: 4px;
+  color: #52616b;
+  background: transparent;
+  cursor: pointer;
+  text-align: left;
+}
+
+aside button:hover {
+  color: #e4572e;
+  background: #fffaf2;
+}
+
+.talk-content {
+  display: grid;
+  flex: 1;
+  grid-template-columns: minmax(260px, 330px) minmax(0, 1fr);
+  gap: 24px;
+  min-width: 0;
+  padding: 38px clamp(20px, 5vw, 70px) 60px;
+}
+
+.room-panel,
+.chat-panel {
+  min-width: 0;
+  padding: 24px;
+  border: 1px solid #d9d9d9;
+  border-radius: 5px;
+  background: #ffffff;
+}
+
+.section-heading,
+.chat-heading {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.eyebrow {
+  margin: 0 0 7px;
+  color: #e4572e;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+h2 {
+  margin: 0;
+  font-size: 25px;
+}
+
+button {
+  border: 0;
+  border-radius: 4px;
+  color: #ffffff;
+  background: #e4572e;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background: #c94420;
+}
+
+#create-room-button {
+  padding: 10px 12px;
+  white-space: nowrap;
+}
+
+.create-room-form {
+  display: flex;
+  gap: 7px;
+  margin-top: 22px;
+}
+
+.create-room-form input,
+.chat-form input {
+  min-width: 0;
+  padding: 11px 12px;
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+  outline-color: #e4572e;
+}
+
+.create-room-form input {
+  flex: 1;
+}
+
+.create-room-form button {
+  padding: 0 12px;
+}
+
+.status {
+  min-height: 18px;
+  margin: 15px 0 8px;
+  color: #7c858a;
+  font-size: 12px;
+}
+
+.room-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.room-item {
+  display: flex;
   align-items: center;
-  border-right: 1px solid #000;
-  width: 150px;
-  height: 715px;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 13px;
+  border: 1px solid #e8e3dc;
+  border-radius: 5px;
+  background: #ffffff;
+  text-align: left;
+}
+
+.room-item strong {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.room-meta {
+  flex: 0 0 auto;
+  color: #7c858a;
+  font-size: 11px;
+}
+
+.empty-room {
+  padding: 35px 10px;
+  color: #7c858a;
+  font-size: 13px;
+  text-align: center;
+}
+
+.chat-panel {
+  display: flex;
+  flex-direction: column;
+  min-height: 610px;
+}
+
+.connection-status {
+  color: #7c858a;
+  font-size: 12px;
+}
+
+.connection-status.connected {
+  color: #2d8a5b;
+}
+
+.chat-messages {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 9px;
+  overflow-y: auto;
+  min-height: 400px;
+  margin: 25px 0 15px;
+  padding: 16px;
+  border: 1px solid #e8e3dc;
+  border-radius: 5px;
+  background: #fafafa;
+}
+
+.chat-placeholder,
+.system-message {
+  margin: auto;
+  color: #7c858a;
+  font-size: 13px;
+  text-align: center;
+}
+
+.message {
+  align-self: flex-start;
+  max-width: 80%;
+  padding: 9px 12px;
+  border-radius: 5px;
+  background: #ffffff;
+}
+
+.message .nickname {
+  display: block;
+  margin-bottom: 3px;
+  color: #e4572e;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.message .message-text {
+  overflow-wrap: anywhere;
+  font-size: 14px;
+}
+
+.chat-form {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 70px;
+  gap: 7px;
+}
+
+.chat-form button {
+  min-width: 0;
+}
+
+@media (max-width: 800px) {
+  .talk-content {
+    grid-template-columns: 1fr;
+  }
+
+  .chat-panel {
+    min-height: 560px;
+  }
+}
+
+@media (max-width: 620px) {
+  body > div {
+    display: block;
+  }
+
+  aside {
+    flex-direction: row;
+    min-height: auto;
+    padding: 10px 16px;
+    border-right: 0;
+    border-bottom: 1px solid #d8d1c7;
+  }
+
+  aside button {
+    padding: 8px;
+    font-size: 12px;
+    text-align: center;
+  }
+
+  .talk-content {
+    padding: 22px 16px 45px;
+  }
+
+  .room-panel,
+  .chat-panel {
+    padding: 18px;
+  }
+
+  .chat-form {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .chat-form button {
+    grid-column: 1 / -1;
+  }
 }

@@ -9,7 +9,7 @@
   <body>
     <div>
       <h1>회원가입</h1>
-      <form>
+      <form id="signup-form">
         <label for="username">사용자명:</label>
         <input type="text" id="username" name="username" required />
         <label for="password">비밀번호:</label>
@@ -22,11 +22,13 @@
           required
         />
         <button type="submit">회원가입</button>
+        <p id="signup-status" role="alert"></p>
         <p>
           이미 계정이 있으신가요? <br />
           <a href="login.html">로그인 하러가기</a>
         </p>
       </form>
     </div>
+    <script src="signup.js" defer></script>
   </body>
 </html>

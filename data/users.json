@@ -1,0 +1,8 @@
+[
+  {
+    "username": "123",
+    "passwordHash": "7097d701e10b96871c94fa42d9fd5452fa99e086e8f11466776296050e4e3f56bac9c2914ad7404be9caac54c03f8fcd346271442743e835e4fe242a44755c68",
+    "salt": "ef59e5f5449e59fd6c5bae22091db1d7",
+    "createdAt": "2026-07-22T05:00:03.417Z"
+  }
+]

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="home.css" />
+    <link rel="stylesheet" href="qna.css" />
     <title>일단애니를보죠</title>
   </head>
   <body>
@@ -17,8 +17,43 @@
         <a href="talk.html"><button>토론</button></a>
         <a href="mypage.html"><button>마이페이지</button></a>
       </aside>
-      <p>ㄱㄴㄷ</p>
-      <!-- 질문 글 여러개, 댓글로 달림 -->
+      <main class="qna-content">
+        <section class="qna-header">
+          <div>
+            <p class="eyebrow">QUESTION BOARD</p>
+            <h2>질문 게시판</h2>
+          </div>
+          <button id="new-post-button" type="button">질문 작성</button>
+        </section>
+        <form id="post-form" class="post-form" hidden>
+          <input
+            id="post-title"
+            type="text"
+            maxlength="100"
+            placeholder="질문 제목"
+            required
+          />
+          <textarea
+            id="post-content"
+            maxlength="2000"
+            placeholder="질문 내용을 입력해주세요"
+            required
+          ></textarea>
+          <div class="form-actions">
+            <button
+              id="cancel-post-button"
+              type="button"
+              class="secondary-button"
+            >
+              취소
+            </button>
+            <button type="submit">등록</button>
+          </div>
+        </form>
+        <p id="qna-status" class="qna-status" aria-live="polite"></p>
+        <section id="post-list" class="post-list" aria-live="polite"></section>
+      </main>
     </div>
+    <script src="qna.js" defer></script>
   </body>
 </html>

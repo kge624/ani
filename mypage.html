@@ -17,8 +17,38 @@
         <a href="talk.html"><button>토론</button></a>
         <button>마이페이지</button>
       </aside>
-      <p>ㄱㄴㄷ</p>
-      <!-- 유저의 정보가 들어갈 자리(닉네임, 아이디, 프로필사진 등) -->
+      <main class="mypage-content">
+        <section class="profile-card">
+          <div class="profile-avatar" id="profile-avatar" aria-hidden="true">
+            ?
+          </div>
+          <div>
+            <p class="eyebrow">MY PROFILE</p>
+            <h2 id="profile-name">로그인이 필요합니다</h2>
+            <p id="profile-created" class="profile-meta"></p>
+          </div>
+          <button id="logout-button" type="button">로그아웃</button>
+        </section>
+
+        <p id="mypage-status" class="mypage-status" aria-live="polite"></p>
+        <section class="activity-grid">
+          <article class="activity-panel">
+            <div class="panel-heading">
+              <h3>작성한 질문</h3>
+              <span id="post-count">0</span>
+            </div>
+            <div id="my-posts" class="activity-list"></div>
+          </article>
+          <article class="activity-panel">
+            <div class="panel-heading">
+              <h3>작성한 댓글</h3>
+              <span id="comment-count">0</span>
+            </div>
+            <div id="my-comments" class="activity-list"></div>
+          </article>
+        </section>
+      </main>
     </div>
+    <script src="mypage.js" defer></script>
   </body>
 </html>
