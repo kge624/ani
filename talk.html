@@ -21,8 +21,7 @@
         <section class="room-panel">
           <div class="section-heading">
             <div>
-              <p class="eyebrow">REAL-TIME TALK</p>
-              <h2>채팅방</h2>
+              <h2>토론</h2>
             </div>
             <button id="create-room-button" type="button">방 만들기</button>
           </div>
@@ -31,10 +30,10 @@
               id="room-name-input"
               type="text"
               maxlength="40"
-              placeholder="채팅방 이름"
+              placeholder="토론 주제"
               required
             />
-            <button type="submit">생성</button>
+            <button type="submit" id="creat">생성</button>
           </form>
           <p id="room-status" class="status" aria-live="polite"></p>
           <div id="room-list" class="room-list" aria-live="polite"></div>
@@ -43,8 +42,8 @@
         <section class="chat-panel" aria-label="채팅">
           <div class="chat-heading">
             <div>
-              <p class="eyebrow">ROOM</p>
-              <h2 id="current-room-name">채팅방을 선택해주세요</h2>
+              <p class="eyebrow"></p>
+              <h2 id="current-room-name">진행할 토론을 선택해주세요</h2>
             </div>
             <span id="connection-status" class="connection-status"
               >연결 안 됨</span
@@ -60,7 +59,7 @@
               id="message-input"
               type="text"
               maxlength="500"
-              placeholder="메시지를 입력하세요"
+              placeholder="메시지를 입력해주세요"
               disabled
               required
             />

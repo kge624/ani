@@ -9,7 +9,6 @@
 body {
   margin: 0;
   color: #18242d;
-  background: #f4f1eb;
   font-family: "Malgun Gothic", sans-serif;
 }
 
@@ -46,7 +45,7 @@ button {
   color: #ffffff;
   background: #e4572e;
   cursor: pointer;
-  font-weight: bold;
+  font-size: 14px;
 }
 
 aside button {
@@ -81,14 +80,6 @@ button:hover {
   gap: 20px;
 }
 
-.eyebrow {
-  margin: 0 0 7px;
-  color: #e4572e;
-  font-size: 11px;
-  font-weight: bold;
-  letter-spacing: 2px;
-}
-
 h2 {
   margin: 0;
   font-size: 32px;
@@ -96,6 +87,7 @@ h2 {
 
 #new-post-button {
   padding: 11px 15px;
+  font-weight: bold;
 }
 
 .post-form {

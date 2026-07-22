@@ -5,7 +5,6 @@
 body {
   margin: 0;
   color: #18242d;
-  background: #f4f1eb;
   font-family: "Malgun Gothic", sans-serif;
 }
 
@@ -42,6 +41,10 @@ aside button,
   color: #52616b;
   background: transparent;
   cursor: pointer;
+  font-size: 14px;
+}
+
+#logout-button {
   font-weight: bold;
 }
 

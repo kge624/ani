@@ -5,21 +5,22 @@
 
 body {
   margin: 0;
-  font-family: system-ui, -apple-system, sans-serif;
+  font-family:
+    system-ui,
+    -apple-system,
+    sans-serif;
   color: #18242d;
-  background-color: #fdfbf7;
 }
 
 h1 {
-  display: flex;
-  justify-content: center;
-  margin: 20px 0 10px;
+  margin: 28px 0 22px;
+  color: #e4572e;
+  text-align: center;
 }
 
 hr {
   border: 0;
   border-top: 1px solid #d8d1c7;
-  margin: 0;
 }
 
 /* 메인 컨테이너 */
@@ -36,7 +37,6 @@ aside {
   align-items: stretch;
   padding: 26px 16px;
   border-right: 1px solid #d8d1c7;
-  width: 150px;
   min-height: calc(100vh - 86px);
 }
 
@@ -107,7 +107,6 @@ h2 {
   padding: 0 16px;
   border: 1px solid #d8d1c7;
   border-radius: 4px;
-  background: #fffdf9;
 }
 
 .search-icon {
@@ -156,7 +155,9 @@ h2 {
   color: inherit;
   background: #ffffff;
   text-decoration: none;
-  transition: transform 180ms ease, box-shadow 180ms ease;
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease;
 }
 
 .anime-card:hover {

@@ -10,16 +10,18 @@
     <div>
       <h1>로그인</h1>
       <form id="login-form">
-        <label for="username">사용자명:</label>
-        <input type="text" id="username" name="username" required />
-        <label for="password">비밀번호:</label>
-        <input type="password" id="password" name="password" required />
-        <button type="submit">로그인</button>
-        <p id="login-status" role="alert"></p>
-        <p>
-          아직 계정이 없으신가요? <br />
-          <a href="sign_up.html">회원가입 하러가기</a>
-        </p>
+        <div id="content">
+          <label for="username">사용자명:</label>
+          <input type="text" id="username" name="username" required />
+          <label for="password">비밀번호:</label>
+          <input type="password" id="password" name="password" required />
+          <button type="submit">로그인</button>
+          <p id="login-status" role="alert"></p>
+          <p>
+            아직 계정이 없으신가요? <br />
+            <a href="sign_up.html">회원가입 하러가기</a>
+          </p>
+        </div>
       </form>
     </div>
     <script src="login.js" defer></script>

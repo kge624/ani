@@ -9,7 +9,6 @@
 body {
   margin: 0;
   color: #18242d;
-  background: #f4f1eb;
   font-family: "Malgun Gothic", sans-serif;
 }
 
@@ -47,6 +46,11 @@ aside button {
   background: transparent;
   cursor: pointer;
   text-align: left;
+  font-size: 14px;
+}
+
+#creat {
+  color: #ffffff;
 }
 
 aside button:hover {
@@ -96,13 +100,18 @@ h2 {
 button {
   border: 0;
   border-radius: 4px;
-  color: #ffffff;
+  color: #313c45;
   background: #e4572e;
   cursor: pointer;
+}
+
+#create-room-button {
+  color: #ffffff;
   font-weight: bold;
 }
 
 button:hover {
+  color: #ffffff;
   background: #c94420;
 }
 
