@@ -10,6 +10,7 @@ body {
   margin: 0;
   color: #18242d;
   font-family: "Malgun Gothic", sans-serif;
+  width: 100%;
 }
 
 h1 {
@@ -68,8 +69,7 @@ button:hover {
 
 .qna-content {
   flex: 1;
-  max-width: 1000px;
-  min-width: 0;
+  width: 1000px;
   padding: 38px clamp(20px, 5vw, 70px) 60px;
 }
 
